@@ -12,7 +12,7 @@ const Sidebar = () => {
     <section className="sticky left-0 top-0 flex flex-col h-screen w-fit justify-between bg-dark-1 p-6 pt-28 text-white max-sm:hidden lg:w-[246px]">
       <div className="flex flex-col flex-1 gap-6">
         {sideBarList.map(({ url, title, icon }) => {
-          const isActive = url === pathname || pathname.startsWith(url);
+          const isActive = url === pathname || pathname.startsWith(`${url}/`);
           return (
             <Link
               href={url}
